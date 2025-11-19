@@ -6,12 +6,14 @@ export default function Home() {
       <h1 className="text-3xl font-bold mb-8 font-heading">Methods of writing to brain</h1>
 
       <div className="border-t border-accent">
-        <div className="flex justify-between items-center py-4 border-b border-accent hover:bg-gray-50 transition-colors">
-          <Link href="/olfactory" className="text-xl block w-full no-underline hover:text-foreground">
-            Ultrasound Olfactory Stimulation
-          </Link>
-          <span className="text-accent text-sm">2025</span>
-        </div>
+        <Link href="/olfactory" className="block group">
+          <div className="flex justify-between items-center py-6 px-4 -mx-4 rounded-lg transition-all duration-300 ease-in-out hover:bg-gray-50 hover:scale-[1.02] hover:shadow-lg border-b border-accent group-hover:border-transparent">
+            <span className="text-xl font-medium group-hover:text-foreground transition-colors arrow-hover arrow-hover-no-underline">
+              Ultrasound Olfactory Stimulation
+            </span>
+            <span className="text-accent text-sm group-hover:text-foreground transition-colors">2025</span>
+          </div>
+        </Link>
         {/* Placeholder for future methods */}
       </div>
     </div>
