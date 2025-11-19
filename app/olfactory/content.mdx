@@ -1,0 +1,70 @@
+We hacked on making smells with ultrasound for 2 days, and found four distinct smells, like the smell of campfire and the sense of fresh air, replicated across two people!
+
+### Can you feel the meaning
+
+The reason stimulating olfactory sensations is interesting is not "VR for smells", as one might initially assume. The nose has 400 distinct receptor types, we can distinguish subtle combinations of their activations, and those could serve as a channel of writing directly into the brain, as a means of non-invasive neuromodulation.
+
+The olfactory system potentially allows to write up to 400, if not 800 due to two nostrils, dimensions into the brain. That is comparable to the dimensionality of latent spaces of LLMs, which implies you could reasonably encode the meaning of a paragraph into a 400-dimensional vector. If you had a device which allows for this kind of writing, you could learn to associate the input patterns with their corresponding meanings. After that, you could directly smell the latent space. A bit of ultrasound, a breath in - and you understood a paragraph.
+
+![](/images/image1.png)
+
+One could make a similar argument for the eyes: take 400 cones on the retina, hijack them, and you've got yourself a 400-dimensional channel. However, there are major differences between the visual and the olfactory systems. The olfactory system is *much* simpler and more directly interfaces with core brain regions, like the hippocampus. The signal through the olfactory system is simply less filtered and processed. If you tried to write arbitrary light intensities into a patch of cones, the next step of the processing would be a convolutional neural network-like structure in the visual cortex, and the signal would get averaged out. The embeddings you'd write would never make it into the higher levels of processing in the brain.
+
+*pic with illustration of differences*
+
+In contrast, only a few synapses separate the olfactory receptors from the hippocampus (This is why certain smells can bring up such strong memories!), which is responsible for memory, as well as from the amygdala, which does emotional regulation.
+
+Finally, personally speaking, the authors use their eyes and ears more than their noses during office work. The nose is an underutilized channel that provides more bandwidth than the vestibular, and imposes fewer bad priors (spatial/tonal maps) than the visual, auditory, and somatosensory.
+
+Scaling up from the four sensations we've got to 400 doesn't seem like an impossible task at all, especially given the large focal spot sizes used here.
+
+## The Setup
+
+We decided to try to stimulate the olfactory bulb with focused ultrasound. As far as we know, no one seems to have done this kind of stimulation before - even in animals - and the mechanisms even of the classical brain tFUS are not fully understood. However, after finding vestibular stimulation in one day last week, it seemed promising to try the same for olfactory.
+
+## The Anatomy
+
+![](/images/image2.png)
+![](/images/image3.png)
+*Fig. N. 3D anatomical model showing the position of the olfactory bulbs, just between the eyes.*
+
+The olfactory bulb, which is the target we want to hit [^1], is located behind the top of the nose. The nose is not known for having a big flat spot to put a transducer on. Furthermore, the nose is often filled with air, so we would have to fill it with ultrasound gel to get effective stimulation from below. Instead, we found that you can couple to the forehead and steer the beam downward to access the olfactory bulb. Notably, the frontal sinuses are in the way, which may significantly decrease the strength of the stimulation. We tried to maximize the portion of the aperture of the transducer located above them, but it’s unclear how much of an effect the sinuses had on the experiment.
+
+## The ultrasound
+
+We build a headset especially for this, but it got a little bit hacky:
+![](/images/image4.png)
+
+We also used a solid coupling solution instead of gel, which was helpful for stable positioning and the overall experience.
+Then, we carefully measured the positioning of the transducer and the focal spot based on an MRI of Lev’s skull:
+![](/images/image5.png)
+Notably, the frontal sinus is in the acoustic path, which probably induces a lot of power loss.
+We ended up using 300 kHz frequency, with 39mm depth and 50-55 degree steering angles. We used pulses with 300kHz carrier frequency, made of 5 cycles with a 1200 Hz pulse repetition frequency. These parameters worked for Albert as well, with minor adjustments.
+
+## Safety
+
+Probably the largest chunk of the time was spent on making sure the ultrasound sequences were as we expected and that they were safe. We measured the field produced by the transducer with a hydrophone tank. The intensity at the focal spot was 150 to 250 kPa, which corresponded to a mechanical index of at most 0.4. That implied that the average intensity at the focal spot was by an order of magnitude lower than what's typically used in tFUS and has been proven safe. We were also way within safety parameters by the mechanical index and the thermals.
+We were concerned with hitting the optic nerve, so we tried to avoid any significant asymmetry in the system. The olfactory bulb has two components to the sides, so a little bit of asymmetry was necessary: we did focus at an angle of 2 degrees to the side in one of the presets. However, we stayed within the limit of 15 degrees, which is enough not to touch the optic nerve.
+
+## Results
+
+We have managed to induce four different sensations, all of them in two people:
+1. An ozone-like sensation, like you're next to an air ionizer
+2. A campfire smell of burning wood
+3. The smell of garbage, like few-day-old fruit peels
+4. The sensation of fresh air, with a lot of oxygen
+
+We distinguish between “smell” and “sensation” here because they feel different, subjectively. The smells are strong and localized to the noise—as if you could find the source by sniffing around. The sensations are more general—usually a weak, slow-onset smell with other (likely placebo) feelings, such as a light tingling on the face. Both smells and sensations are strongest on a light in-breath, so we tested by sitting there, with a probe to the forehead, mildly sniffing. Sometimes there is a slight waft of a smell that comes on over a few breaths, and sometimes it just hits you. The first time Albert smelled the garbage, he jerked his eyes open thinking a garbage truck just drove in!
+
+Many of these smells correspond not to specific receptor types but rather combinations of receptors. We think this is because the focal spot is pretty large—300kHz ultrasound in tissue has a wavelength of 5mm, while the adult human olfactory bulb is roughly 6-14mm in length.
+
+We found different smells by steering the beam over ~14 mm (20 degrees at 4 cm radius). The distance between freshness and burning was ~3.5 mm. We ensured that the effect was not placebo with an auditory mask (blasting music through airpods), and tested discrimination via double-blind trial (p < XX, n = XX).
+
+It is remarkable that we could induce different smells with such little steering (40% of the diffraction-limited focal spot size). This suggests that the resolution we have access to is much higher than the spatial resolution of the ultrasound (a kind of super-resolution for neurostim!) In particular, we do not need single-neuron resolution to find an independent basis of smells, upon which we can construct our latent space. To improve this system, the next steps are a more stable setup, increased frequency, more play with focal location, spot size, and stimulus waveform.
+
+We found four smells in a couple of days. It should be possible to increase the bit rate of olfactory stimulation by *a lot*.
+
+If we gain control of all 400 basis vectors, we might be able to smell meaning.
+And we’ve already done the first one percent.
+
+[^1]: https://pmc.ncbi.nlm.nih.gov/articles/PMC3361538/
