@@ -1,5 +1,6 @@
 import Content from './content.mdx'
 import Link from 'next/link'
+import TableOfContents from './TableOfContents'
 
 export default function OlfactoryPage() {
     return (
@@ -22,19 +23,25 @@ export default function OlfactoryPage() {
                 </video>
             </div>
 
-            <div className="mb-8">
-                <Link href="/" className="text-sm text-accent hover:text-foreground transition-colors">
-                    ← Go to main
-                </Link>
+            <div className="lg:flex lg:gap-12 relative">
+                <div className="hidden lg:block sticky top-8 self-start w-64 pr-8">
+                    {/* <div className="mb-8">
+                        <Link href="/" className="text-sm text-accent hover:text-foreground transition-colors">
+                            ← Go to main
+                        </Link>
+                    </div> */}
+                    <TableOfContents />
+                </div>
+                <div className="flex-1 min-w-0">
+                    <Content />
+                </div>
             </div>
-
-            <Content />
-
+            {/* 
             <div className="mt-16 pt-8 border-t border-accent">
                 <Link href="/" className="text-sm text-accent hover:text-foreground transition-colors">
                     ← Go to main
                 </Link>
-            </div>
+            </div> */}
         </article>
     )
 }
