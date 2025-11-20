@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <main className="container" style={{ padding: '0' }}>
+        <main className="container" style={{ padding: '0', maxWidth: '80vw' }}>
           {children}
         </main>
       </body>
