@@ -3,6 +3,23 @@ import Link from 'next/link'
 import Image from 'next/image'
 import TableOfContents from './TableOfContents'
 
+export const metadata = {
+    title: 'We Induced Smells With Ultrasound',
+    description: 'We decided to try to stimulate the olfactory bulb with focused ultrasound. As far as we know, no one seems to have done this kind of stimulation before - even in animals.',
+    openGraph: {
+        title: 'We Induced Smells With Ultrasound',
+        description: 'We decided to try to stimulate the olfactory bulb with focused ultrasound. As far as we know, no one seems to have done this kind of stimulation before - even in animals.',
+        images: [
+            {
+                url: '/images/image6.png',
+                width: 1074,
+                height: 1000,
+                alt: 'Olfactory illustration',
+            },
+        ],
+    },
+}
+
 export default function OlfactoryPage() {
     return (
         <article>

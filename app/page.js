@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -8,9 +9,23 @@ export default function Home() {
       <div className="border-t border-accent">
         <Link href="/olfactory" className="block group no-underline">
           <div className="flex justify-between items-center py-6 px-4 -mx-4 rounded-lg transition-all duration-300 ease-in-out hover:bg-gray-50 hover:scale-[1.02] hover:shadow-lg border-b border-accent group-hover:border-transparent">
-            <span className="text-xl font-medium group-hover:text-foreground transition-colors arrow-hover arrow-hover-no-underline">
-              Ultrasound Olfactory Stimulation
-            </span>
+            <div className="flex items-center gap-4">
+              <div className="relative w-16 h-16 flex-shrink-0">
+                <Image
+                  src="/images/image6.png"
+                  alt="Olfactory illustration"
+                  width={64}
+                  height={64}
+                  style={{
+                    width: '10rem', marginRight: '3rem'
+                  }}
+                  className="object-cover rounded-md w-full h-full"
+                />
+              </div>
+              <span className="text-xl font-medium group-hover:text-foreground transition-colors arrow-hover arrow-hover-no-underline">
+                Ultrasound Olfactory Stimulation
+              </span>
+            </div>
             <span className="text-accent text-sm group-hover:text-foreground transition-colors">2025</span>
           </div>
         </Link>
