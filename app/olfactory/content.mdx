@@ -3,7 +3,7 @@ import SmellList from './SmellList'
 
 
 
-We used an ultrasound probe placed on the forehead and pointed at the olfactory bulb to obtain different sensations. Different focal spots corresponded to different smells, which we’ve replicated first-try on two people, and with a blind trial. The sensations we obtained are:  
+We used an ultrasound probe placed on the forehead and pointed at the olfactory bulb to obtain different sensations. Different focal spots corresponded to different smells, which we’ve replicated *first-try* on two people, and with a blind trial. The sensations we obtained are:  
 <SmellList />
 
 Here is a video from our blind tasting:
@@ -18,7 +18,7 @@ Here is a video from our blind tasting:
 
 ## The Setup
 
-Smells are processed in the olfactory bulb. We decided to try to stimulate it with focused ultrasound through the skull. As far as we know, no one seems to have done this kind of stimulation before \- even in animals.  
+Smells are processed in the olfactory bulb. We decided to try to stimulate it with focused ultrasound through the skull. As far as we know, *no one seems to have done this kind of stimulation before* - even in animals.  
 However, after being able to induce sensations of motion through stimulation of the vestibular system in one day the previous week, it seemed promising to try the same for olfactory. 
 
 ### The Anatomy
@@ -36,7 +36,7 @@ The olfactory bulb, our [target](https://pmc.ncbi.nlm.nih.gov/articles/PMC336153
 
 ### The ultrasound
 
-Initially, we got the first signal with just a handheld probe and some ultrasound gel. However, it’s very difficult to maintain consistent focal spot positions with a handheld probe, so w a headset. It got a little bit hacky:  
+Initially, we got the first signal with just a handheld probe and some ultrasound gel. However, it’s very difficult to maintain consistent focal spot positions with a handheld probe, so we used a headset. It got a little bit hacky:  
 <div className="flex gap-12 justify-center my-8 items-center">
     <div>
         <img src="/images/image4.png" alt="Anatomy 1" className="h-64 w-auto rounded-lg" style={{ height: '15rem', margin: '0' }} />
@@ -65,25 +65,26 @@ We were concerned with hitting the optic nerves, so we tried to avoid any signif
 We have managed to induce four different sensations, all of them in two people:  
 <SmellList />
 
-We distinguish between “smell” and “sensation” here because they feel different, subjectively. The smells are strong and localized to the noise—as if you could find the source by sniffing around. The sensations are more general—usually a weak, slow-onset smell with other (likely placebo) feelings, such as a light tingling on the face. Both smells and sensations are strongest on a light in-breath, so we tested by sitting there, with a probe to the forehead, mildly sniffing. Sometimes there is a slight waft of a smell that comes on over a few breaths, and sometimes it just hits you. The first time Albert smelled the garbage, he jerked his eyes open thinking a garbage truck just drove in\! 
+We distinguish between “smell” and “sensation” here because they feel different, *subjectively*. The smells are strong and localized to the noise—as if you could find the source by sniffing around. The sensations are more general—usually a weak, slow-onset smell with other (likely placebo) feelings, such as a light tingling on the face. Both smells and sensations are strongest on a light in-breath, so we tested by sitting there, with a probe to the forehead, mildly sniffing. Sometimes there is a slight waft of a smell that comes on over a few breaths, and sometimes it just hits you. The first time Albert smelled the garbage, he jerked his eyes open thinking a garbage truck just drove in\! 
 
 Many of these smells correspond not to specific receptor types but rather combinations of receptors. We think this is because the focal spot is pretty large—300kHz ultrasound in tissue has a wavelength of 5mm, while the adult human olfactory bulb is roughly 6-14mm in length. 
 
 We found different smells by steering the beam over \~14 mm (20 degrees at 4 cm radius). The distance between freshness and burning was \~3.5 mm. We ensured that the effect was not placebo with an auditory mask (blasting music through airpods) so you don’t hear the probe, though you cannot distinguish the different focal spots through sound anyways. We then tested discrimination in a trial where Thomas selected the focal spots, and Lev was naming the scents. You can check out the full video [here](https://drive.google.com/file/d/15unzKH91czjzKANmB-eiTck7f7kKphz-/view?usp=sharing).
 
-It is remarkable that we could induce different smells with such little steering (40% of the diffraction-limited focal spot size). This suggests that the resolution we have access to is much higher than the spatial resolution of the ultrasound (a kind of super-resolution for neurostim\!) In particular, we do not need single-neuron resolution to find an independent basis of smells, upon which we can construct our latent space. To improve this system, the next steps are a more stable setup, increased frequency, more play with focal location, spot size, and stimulus waveform. 
+It is remarkable that we could induce different smells with such little steering (40% of the diffraction-limited focal spot size). This suggests that the resolution we have access to is much higher than the spatial resolution of the ultrasound (a kind of *super-resolution for neurostim!*) In particular, we do not need single-neuron resolution to find an independent basis of smells, upon which we can construct our latent space. To improve this system, the next steps are a more stable setup, increased frequency, more play with focal location, spot size, and stimulus waveform. 
 
 ### Can you feel the meaning
 
-The reason stimulating olfactory sensations is interesting is not "VR for smells", as one might initially assume. The nose has 400 distinct receptor types, and we can distinguish [subtle combinations](https://pmc.ncbi.nlm.nih.gov/articles/PMC4483192/) of their activations, so they could serve as a channel of writing directly into the brain, as a means of non-invasive neuromodulation.
-
-The olfactory system potentially allows writing up to 400, if not 800 due to two nostrils, dimensions into the brain. That is comparable to the dimensionality of latent spaces of LLMs, which implies you could reasonably encode the meaning of a paragraph into a 400-dimensional vector. If you had a device which allows for this kind of writing, you could learn to associate the input patterns with their corresponding meanings. After that, you could directly smell the latent space. A bit of ultrasound, a breath in \- and you understood a paragraph. 
-
 ![](/images/image3.png)
+
+The reason stimulating olfactory sensations is interesting is not "VR for smells", as one might initially assume. The nose has **400 distinct receptor types**, and we can distinguish [subtle combinations](https://pmc.ncbi.nlm.nih.gov/articles/PMC4483192/) of their activations, so they could serve as a channel of writing directly into the brain, as a means of non-invasive neuromodulation.
+
+The olfactory system potentially allows writing up to 400, if not 800 due to two nostrils, dimensions into the brain. That is comparable to the dimensionality of latent spaces of LLMs, which implies you could reasonably encode the meaning of a paragraph into a 400-dimensional vector. If you had a device which allows for this kind of writing, you could learn to associate the input patterns with their corresponding meanings. After that, you could directly **smell the latent space**. A bit of ultrasound, a breath in \- and you understood a paragraph. 
+
 
 People are able to develop synesthesia \- being able to hear colors and see smells, and it might be possible to extend that to semantics. However, at this stage it is speculative.
 
-One could make a similar argument for the eyes: take 400 cones on the retina, hijack them, and you've got yourself a 400-dimensional channel. But we think the nose is better. T The olfactory system is *much* simpler and more directly interfaces with core brain regions, like the hippocampus. The signal through the olfactory system is simply less filtered and processed. If you tried to write arbitrary light intensities into a patch of cones, the next step of the processing would be a convolutional neural network-like structure in the visual cortex, and the signal would get averaged out. The embeddings you'd write would never make it into the higher levels of processing in the brain. You can try to encode the information in a more easily perceptible way, such as [Chernoff faces](https://en.wikipedia.org/wiki/Chernoff_face), but it would reduce the bandwidth, and learning the remapping would still be very difficult.
+One could make a similar argument for the eyes: take 400 cones on the retina, hijack them, and you've got yourself a 400-dimensional channel. But we think the nose is better. The olfactory system is *much* simpler and more directly interfaces with core brain regions, like the hippocampus. The signal through the olfactory system is simply less filtered and processed. If you tried to write arbitrary light intensities into a patch of cones, the next step of the processing would be a convolutional neural network-like structure in the visual cortex, and the signal would get averaged out. The embeddings you'd write would never make it into the higher levels of processing in the brain. You can try to encode the information in a more easily perceptible way, such as [Chernoff faces](https://en.wikipedia.org/wiki/Chernoff_face), but it would reduce the bandwidth, and learning the remapping would still be very difficult.
 
 ![](/images/image5.png)
 
@@ -93,6 +94,6 @@ Finally, personally speaking, the authors use their eyes and ears more than thei
 
 We found four smells in a couple of days. With a little more engineering, it should be possible to increase the bit rate of olfactory stimulation by *a lot*. 
 
-If we gain control of all 400 basis vectors, we might be able to smell meaning.   
+If we gain control of all 400 basis vectors, we might be able to **smell meaning**.   
 And we’ve already done the first one percent. 
 
