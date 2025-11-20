@@ -1,10 +1,12 @@
 
+import SmellList from './SmellList'
+
+
 
 We used an ultrasound probe placed on the forehead and pointed at the olfactory bulb to obtain different sensations. Different focal spots corresponded to different smells, which we’ve replicated first-try on two people, and with a blind trial. The sensations we obtained are:  
-1\. An ozone-like sensation, like you're next to an air ionizer  
-2\. A campfire smell of burning wood  
-3\. The smell of garbage, like few-day-old fruit peels  
-4\. The sensation of fresh air, with a lot of oxygen
+<SmellList />
+
+Here is a video from our blind tasting:
 
 <div className="mb-8">
     <video controls className="w-full rounded-lg" style={{ maxHeight: '500px', width: '100%' }}>
@@ -30,7 +32,7 @@ However, after being able to induce sensations of motion through stimulation of 
     </div>
 </div>
 
-The olfactory bulb, our target \[[https://pmc.ncbi.nlm.nih.gov/articles/PMC3361538/](https://pmc.ncbi.nlm.nih.gov/articles/PMC3361538/) \], is located behind the top of the nose. Now, the nose is not known for having a big flat spot to put a transducer on. Furthermore, the nose is often filled with air, so we would have to fill it with ultrasound gel to get effective stimulation from below. Instead, we found that you can couple to the forehead and steer the beam downward to access the olfactory bulb. Notably, the frontal sinuses are in the way, which may significantly decrease the strength of the stimulation. We tried to maximize the portion of the aperture of the transducer located above them, but it’s unclear how much of an effect the sinuses had on the experiment.
+The olfactory bulb, our [target](https://pmc.ncbi.nlm.nih.gov/articles/PMC3361538/), is located behind the top of the nose. Now, the nose is not known for having a big flat spot to put a transducer on. Furthermore, the nose is often filled with air, so we would have to fill it with ultrasound gel to get effective stimulation from below. Instead, we found that you can couple to the forehead and steer the beam downward to access the olfactory bulb. Notably, the frontal sinuses are in the way, which may significantly decrease the strength of the stimulation. We tried to maximize the portion of the aperture of the transducer located above them, but it’s unclear how much of an effect the sinuses had on the experiment.
 
 ### The ultrasound
 
@@ -61,10 +63,7 @@ We were concerned with hitting the optic nerves, so we tried to avoid any signif
 ## Results
 
 We have managed to induce four different sensations, all of them in two people:  
-1\. An ozone-like sensation, like you're next to an air ionizer  
-2\. A campfire smell of burning wood  
-3\. The smell of garbage, like few-day-old fruit peels  
-4\. The sensation of fresh air, with a lot of oxygen
+<SmellList />
 
 We distinguish between “smell” and “sensation” here because they feel different, subjectively. The smells are strong and localized to the noise—as if you could find the source by sniffing around. The sensations are more general—usually a weak, slow-onset smell with other (likely placebo) feelings, such as a light tingling on the face. Both smells and sensations are strongest on a light in-breath, so we tested by sitting there, with a probe to the forehead, mildly sniffing. Sometimes there is a slight waft of a smell that comes on over a few breaths, and sometimes it just hits you. The first time Albert smelled the garbage, he jerked his eyes open thinking a garbage truck just drove in\! 
 
