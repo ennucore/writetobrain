@@ -28,14 +28,14 @@ a {
   text-decoration: none;
   background-image: linear-gradient(var(--foreground), var(--foreground)), linear-gradient(var(--accent), var(--accent));
   background-size: 0% 1px, 100% 1px;
-  background-position: 0 100%, 0 100%;
+  background-position: 0 100%, 100% 100%;
   background-repeat: no-repeat;
-  transition: background-size 0.3s ease;
+  transition: color 0.3s ease, background-size 0.3s ease;
   padding-bottom: 2px;
 }
 
 a:hover {
-  background-size: 100% 1px, 100% 1px;
+  background-size: 100% 1px, 0% 1px;
   color: var(--foreground);
 }
 
@@ -182,7 +182,7 @@ a:hover {
 }
 
 .no-underline {
-  border-bottom: none;
+  background-image: none;
 }
 
 /* MDX Styles */

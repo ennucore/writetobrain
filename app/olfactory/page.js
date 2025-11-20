@@ -7,7 +7,7 @@ export default function OlfactoryPage() {
         <article>
             <header className="mb-8 text-center">
                 <h1 className="text-3xl font-bold mb-2">Smell the ultrasound</h1>
-                <p className="text-xl text-accent italic mb-4">
+                <p className="text-lg italic mb-4">
                     Inducing smell sensations with transcranial focused ultrasound stimulation of the olfactory system
                 </p>
                 <div className="text-sm text-accent">
