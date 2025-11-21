@@ -92,9 +92,9 @@ a:hover {
   max-width: 80vw;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1000px) {
   #main-container {
-    max-width: 65%;
+    max-width: 60vw;
   }
 }
 
