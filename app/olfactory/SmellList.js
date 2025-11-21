@@ -4,12 +4,12 @@ export default function SmellList() {
     const smells = [
         {
             src: "/icons/fresh.webm",
-            text: "The sensation of fresh air, with a lot of oxygen",
+            text: "A fresh sensation, like breathing in oxygen-rich air",
             isVideo: true
         },
         {
             src: "/icons/garbage.webm",
-            text: "The smell of garbage, like few-day-old fruit peels",
+            text: "The smell of garbage, like fruit peels left out for a few days",
             isVideo: true
         },
         {
