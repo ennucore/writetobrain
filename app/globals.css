@@ -140,6 +140,14 @@ a:hover {
   color: var(--accent);
 }
 
+.mt-36 {
+  margin-top: 9rem;
+}
+
+.mb-48 {
+  margin-bottom: 12rem;
+}
+
 .font-bold {
   font-weight: 600;
 }
