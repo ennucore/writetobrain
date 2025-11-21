@@ -363,6 +363,10 @@ article li {
 }
 
 @media (min-width: 1280px) {
+  #main-container {
+    max-width: min(60vw, calc(100vw - 36rem));
+  }
+
   article p {
     position: relative;
   }
