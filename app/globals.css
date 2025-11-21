@@ -201,6 +201,10 @@ a:hover {
 }
 
 /* MDX Styles */
+article {
+  counter-reset: sidenote-counter;
+}
+
 article h1 {
   font-family: var(--font-serif);
   font-size: 2.5rem;
@@ -208,6 +212,38 @@ article h1 {
   margin-bottom: 1rem;
   font-weight: 600;
   line-height: 1.2;
+}
+
+/* ... existing styles ... */
+
+/* Sidenotes */
+.sidenote {
+  display: none;
+}
+
+.sidenote-ref {
+  cursor: pointer;
+  counter-increment: sidenote-counter;
+}
+
+.sidenote-ref a::after {
+  content: counter(sidenote-counter);
+}
+
+.sidenote-number::after {
+  content: counter(sidenote-counter);
+}
+
+@media (min-width: 1280px) {
+  /* ... existing styles ... */
+
+  .sidenote-number {
+    vertical-align: super;
+    font-size: 0.7rem;
+    margin-right: 0.2rem;
+  }
+
+  /* ... */
 }
 
 article h2 {
@@ -315,6 +351,15 @@ article li {
 
 .sidenote-ref {
   cursor: pointer;
+  counter-increment: sidenote-counter;
+}
+
+.sidenote-ref a::after {
+  content: counter(sidenote-counter);
+}
+
+.sidenote-number::after {
+  content: counter(sidenote-counter);
 }
 
 @media (min-width: 1280px) {
@@ -334,18 +379,12 @@ article li {
     text-align: left;
   }
 
-  .sidenote-number {
-    vertical-align: super;
-    font-size: 0.7rem;
-    margin-right: 0.2rem;
-  }
-
   /* Hide bottom footnotes on desktop */
   [data-footnotes] {
     display: none;
   }
 
-  /* Hide superscript ref in text when sidenote is shown? 
+  /* Hide superscript ref in text when sidenote is shown?
      Actually, we probably want to keep the number in the text so the user knows which note refers to what.
      But the Sidenote component renders both the sup ref and the span note.
      So we just need to make sure the span note is positioned correctly.
