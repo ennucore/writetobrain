@@ -87,6 +87,17 @@ a:hover {
   /* More vertical padding */
 }
 
+#main-container {
+  padding: 0;
+  max-width: 80vw;
+}
+
+@media (min-width: 1280px) {
+  #main-container {
+    max-width: 65%;
+  }
+}
+
 /* Minimalistic utilities */
 .text-center {
   text-align: center;
@@ -295,4 +306,48 @@ article li {
 
 [data-footnote-backref]:hover {
   color: var(--foreground);
+}
+
+/* Sidenotes */
+.sidenote {
+  display: none;
+}
+
+.sidenote-ref {
+  cursor: pointer;
+}
+
+@media (min-width: 1280px) {
+  article p {
+    position: relative;
+  }
+
+  .sidenote {
+    display: block;
+    position: absolute;
+    right: -16rem;
+    top: 0;
+    width: 14rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--accent);
+    text-align: left;
+  }
+
+  .sidenote-number {
+    vertical-align: super;
+    font-size: 0.7rem;
+    margin-right: 0.2rem;
+  }
+
+  /* Hide bottom footnotes on desktop */
+  [data-footnotes] {
+    display: none;
+  }
+
+  /* Hide superscript ref in text when sidenote is shown? 
+     Actually, we probably want to keep the number in the text so the user knows which note refers to what.
+     But the Sidenote component renders both the sup ref and the span note.
+     So we just need to make sure the span note is positioned correctly.
+  */
 }

@@ -2,6 +2,8 @@ import Content from './content.mdx'
 import Link from 'next/link'
 import Image from 'next/image'
 import TableOfContents from './TableOfContents'
+import { FootnoteProvider } from './FootnoteContext'
+import FootnoteDisplay from './FootnoteDisplay'
 
 export const metadata = {
     title: 'We Induced Smells With Ultrasound',
@@ -63,8 +65,11 @@ export default function OlfactoryPage() {
                     </div> */}
                     <TableOfContents />
                 </div>
-                <div className="flex-1 min-w-0">
-                    <Content />
+                <div className="flex-1 min-w-0 xl:pr-64">
+                    <FootnoteProvider>
+                        <Content />
+                        <FootnoteDisplay />
+                    </FootnoteProvider>
                 </div>
             </div>
             {/* 

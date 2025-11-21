@@ -1,5 +1,6 @@
 
 import SmellList from './SmellList'
+import Sidenote from './Sidenote'
 
 
 
@@ -81,13 +82,13 @@ We have managed to induce four different sensations, all of them in two people:
 
 We distinguish between _a smell_ and _a sensation_ here because, subjectively, they feel different. The smells are strong and localized to the noise, almost like you could sniff around and find the source. The sensations are more diffuse: a weak, slow-onset impression of a smell, often paired with other (likely placebo) feelings, such as a light tingling on the face.
 
-Both smells and sensations are strongest on a light in-breath, so we tested by sitting there, with a probe to the forehead, mildly sniffing. Sometimes there is a slight waft of a smell that comes on over a few breaths, and sometimes it just hits you. The first time Albert smelled the garbage, he jerked his eyes open thinking a garbage truck just drove in!<sup><a href="#fn1" id="ref1" data-footnote-ref>1</a></sup>
+Both smells and sensations are strongest on a light in-breath, so we tested by sitting there, with a probe to the forehead, mildly sniffing. Sometimes there is a slight waft of a smell that comes on over a few breaths, and sometimes it just hits you. The first time Albert smelled the garbage, he jerked his eyes open thinking a garbage truck just drove in!<Sidenote id="1">This was indoors.</Sidenote>
 
-Many of these scents correspond not to specific receptor types but rather combinations of receptors. We think this is because the focal spot is pretty large—300kHz ultrasound in tissue has a wavelength of 5mm, while the adult human olfactory bulb is roughly 6-14mm in length<sup><a href="#fn2" id="ref2" data-footnote-ref>2</a></sup>. 
+Many of these scents correspond not to specific receptor types but rather combinations of receptors. We think this is because the focal spot is pretty large—300kHz ultrasound in tissue has a wavelength of 5mm, while the adult human olfactory bulb is roughly 6-14mm in length<Sidenote id="2">The olfactory bulb can vary in size by up to 3x, depending on "age and olfactory experience", so perhaps (we're making this up) with more usage your olfactory bulb might actually get bigger, leading to better resolution stimulation!</Sidenote>. 
 
 We found different scents by steering the beam over \~14 mm (20 degrees at 4 cm radius). The distance between freshness and burning was \~3.5 mm. We ensured that the effect was not placebo with an auditory mask (blasting music through airpods) so you don’t hear the probe, though you cannot distinguish the different focal spots through sound anyways. We then tested discrimination in a trial where Thomas selected the focal spots, and Lev was naming the scents. You can check out the full video [here](https://drive.google.com/file/d/15unzKH91czjzKANmB-eiTck7f7kKphz-/view?usp=sharing).
 
-It is remarkable that we could induce different scents with such little steering (40% of the diffraction-limited focal spot size<sup><a href="#fn3" id="ref3" data-footnote-ref>3</a></sup>). This suggests that the resolution we have access to is much higher than the spatial resolution of the ultrasound (a kind of *super-resolution for neurostim!*) In particular, we do not need single-neuron resolution to find an independent basis of scents, upon which we can construct our latent space. To improve this system, the next steps are a more stable setup, increased frequency, more play with focal location, spot size, and stimulus waveform. 
+It is remarkable that we could induce different scents with such little steering (40% of the diffraction-limited focal spot size<Sidenote id="3">And potentially even higher, because there was some dead space in between the focal spots, where you don't feel anything.</Sidenote>). This suggests that the resolution we have access to is much higher than the spatial resolution of the ultrasound (a kind of *super-resolution for neurostim!*) In particular, we do not need single-neuron resolution to find an independent basis of scents, upon which we can construct our latent space. To improve this system, the next steps are a more stable setup, increased frequency, more play with focal location, spot size, and stimulus waveform. 
 
 ### Can you feel the meaning
 
@@ -106,29 +107,9 @@ One could try to make a similar argument for the eyes: take 400 cones on the ret
 
 In contrast, only a few synapses separate the olfactory receptors from the [hippocampus](https://pmc.ncbi.nlm.nih.gov/articles/PMC8096712/) (This is why certain smells can bring up such strong memories\!), which is responsible for memory, as well as from the amygdala, which does emotional regulation. 
 
-Finally, personally speaking, the authors use their eyes and ears more than their noses during office work. The nose is an underutilized channel that provides more bandwidth than the vestibular, and imposes fewer bad priors (spatial/tonal maps) than the visual, auditory, and somatosensory.
+Finally, personally speaking, the authors use their eyes and ears more than their noses during office work<Sidenote id="4">Raphael Hotter noted that this is in fact a general statement, as the usage of eyes and ears extends beyond office work.</Sidenote>. The nose is an underutilized channel that provides more bandwidth than the vestibular, and imposes fewer bad priors (spatial/tonal maps) than the visual, auditory, and somatosensory.
 
 We found four scents in a couple of days. With a little more engineering, it should be possible to increase the bit rate of olfactory stimulation by *a lot*. 
 
 If we gain control of all 400 basis vectors, we might be able to **smell meaning**.   
 And we’ve already done the first one percent. 
-
-<div data-footnotes>
-  <ol>
-    <li id="fn1">
-      <p>
-        This was indoors. <a href="#ref1" data-footnote-backref aria-label="Back to content">↩</a>
-      </p>
-    </li>
-    <li id="fn2">
-      <p>
-        The olfactory bulb can vary in size by up to 3x, depending on "age and olfactory experience", so perhaps (we're making this up) with more usage of this kind of stimulation, <b>your olfactory bulb might actually get bigger</b>, leading to better resolution stimulation! <a href="#ref2" data-footnote-backref aria-label="Back to content">↩</a>
-      </p>
-    </li>
-    <li id="fn3">
-      <p>
-        And potentially even higher, because there was some dead space in between the focal spots, where you don't feel anything. <a href="#ref3" data-footnote-backref aria-label="Back to content">↩</a>
-      </p>
-    </li>
-  </ol>
-</div>
