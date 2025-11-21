@@ -25,7 +25,7 @@ export const metadata = {
 export default function OlfactoryPage() {
     return (
         <article>
-            <header className="mb-8 text-center">
+            <header className="mb-8 mt-36 text-center">
                 <div className="flex justify-center">
                     <Image
                         src="/images/image6.png"
@@ -33,7 +33,7 @@ export default function OlfactoryPage() {
                         width={1074}
                         height={1000}
                         className="object-contain"
-                        style={{ width: '20rem', height: 'auto', marginTop: '1rem', marginBottom: '0' }}
+                        style={{ width: '20rem', height: 'auto', marginTop: '1rem', marginBottom: '2rem' }}
                     />
                 </div>
                 <h1 className="text-3xl font-bold mb-2">We Induced Smells With Ultrasound</h1>
@@ -46,6 +46,9 @@ export default function OlfactoryPage() {
                     <a href="https://thomasrribeiro.com/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Thomas Ribeiro</a>,{' '}
                     <a href="https://aayushg.com/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Aayush Gupta</a>
                 </div>
+                <p className="text-sm italic mb-4">
+                Discuss on <a href="https://news.ycombinator.com/item?id=46008332">hn</a> or <a href="https://x.com/ennucore/status/1991949868773126361">x</a>.
+                </p>
             </header>
 
             {/* <div className="mb-8">
@@ -56,7 +59,7 @@ export default function OlfactoryPage() {
                 </video>
             </div> */}
 
-            <div className="lg:flex lg:gap-12 relative">
+            <div className="lg:flex lg:gap-12 relative mb-48">
                 <div className="hidden lg:block sticky top-8 self-start w-64 pr-8">
                     {/* <div className="mb-8">
                         <Link href="/" className="text-sm text-accent hover:text-foreground transition-colors">
