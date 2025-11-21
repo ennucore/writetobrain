@@ -46,6 +46,9 @@ export default function OlfactoryPage() {
                     <a href="https://thomasrribeiro.com/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Thomas Ribeiro</a>,{' '}
                     <a href="https://aayushg.com/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Aayush Gupta</a>
                 </div>
+                <p className="text-sm italic mb-4">
+                Discuss on <a href="https://news.ycombinator.com/item?id=46008332">hn</a> or <a href="https://x.com/ennucore/status/1991949868773126361">x</a>.
+                </p>
             </header>
 
             {/* <div className="mb-8">
