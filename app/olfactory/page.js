@@ -43,7 +43,7 @@ export default function OlfactoryPage() {
                 <div className="text-sm text-accent">
                     <a href="https://lev.la" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Lev Chizhov</a>,{' '}
                     <a href="https://exr0n.com/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Albert Yan-Huang</a>,{' '}
-                    <a href="https://x.com/thomas_rribeiro" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Thomas Ribeiro</a>,{' '}
+                    <a href="https://thomasrribeiro.com/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Thomas Ribeiro</a>,{' '}
                     <a href="https://aayushg.com/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Aayush Gupta</a>
                 </div>
             </header>
