@@ -6,7 +6,7 @@ export default function Home() {
     <div className="max-w-2xl mx-auto mt-20">
       <h1 className="text-3xl font-bold mb-8 font-heading">Methods of writing to brain</h1>
 
-      <div className="border-t border-accent">
+      <div className="border-t border-accent" style={{ paddingTop: '0.3rem' }}>
         <Link href="/olfactory" className="block group no-underline">
           <div className="flex justify-between items-center py-6 px-4 -mx-4 rounded-lg transition-all duration-300 ease-in-out hover:bg-gray-50 hover:scale-[1.02] hover:shadow-lg border-b border-accent group-hover:border-transparent">
             <div className="flex items-center gap-4">

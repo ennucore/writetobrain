@@ -33,7 +33,7 @@ export default function OlfactoryPage() {
                         width={1074}
                         height={1000}
                         className="object-contain"
-                        style={{ width: '15rem', height: 'auto', marginTop: '1rem', marginBottom: '0' }}
+                        style={{ width: '20rem', height: 'auto', marginTop: '1rem', marginBottom: '0' }}
                     />
                 </div>
                 <h1 className="text-3xl font-bold mb-2">We Induced Smells With Ultrasound</h1>

@@ -75,7 +75,8 @@ a:hover {
   background-size: 0% 1px;
 }
 
-.arrow-hover:hover::after {
+.arrow-hover:hover::after,
+.group:hover .arrow-hover::after {
   opacity: 1;
   transform: translateX(0);
 }
