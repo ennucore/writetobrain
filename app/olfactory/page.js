@@ -7,10 +7,10 @@ import FootnoteDisplay from './FootnoteDisplay'
 
 export const metadata = {
     title: 'We Induced Smells With Ultrasound',
-    description: 'We decided to try to stimulate the olfactory bulb with focused ultrasound. As far as we know, no one seems to have done this kind of stimulation before - even in animals.',
+    description: 'We decided to try to stimulate the olfactory bulb with focused ultrasound. As far as we know, no one seems to have done this kind of stimulation before - not even in animals.',
     openGraph: {
         title: 'We Induced Smells With Ultrasound',
-        description: 'We decided to try to stimulate the olfactory bulb with focused ultrasound. As far as we know, no one seems to have done this kind of stimulation before - even in animals.',
+        description: 'We decided to try to stimulate the olfactory bulb with focused ultrasound. As far as we know, no one seems to have done this kind of stimulation before - not even in animals.',
         images: [
             {
                 url: '/images/image6.png',
