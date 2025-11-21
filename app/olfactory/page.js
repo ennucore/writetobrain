@@ -36,7 +36,7 @@ export default function OlfactoryPage() {
                 </div>
                 <h1 className="text-3xl font-bold mb-2">We Induced Smells With Ultrasound</h1>
                 <p className="text-lg italic mb-4">
-                    We stimulated the scent-processing brain regions with focused ultrasound. As far as we know, no one seems to have done this kind of stimulation before - even in animals. We obtained scents such as a campfire burn or fresh air in two days, replicated across two people!
+                    We stimulated the scent-processing brain regions with focused ultrasound. As far as we know, no one seems to have done this kind of stimulation before - even in animals. We reliably produced distinct scents such as a campfire burn or fresh air!
                 </p>
                 <div className="text-sm text-accent">
                     <a href="https://lev.la" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Lev Chizhov</a>,{' '}

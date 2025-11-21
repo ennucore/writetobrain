@@ -32,46 +32,62 @@ However, after being able to induce sensations of motion through stimulation of 
     </div>
 </div>
 
-The olfactory bulb, our [target](https://pmc.ncbi.nlm.nih.gov/articles/PMC3361538/), is located behind the top of the nose. Now, the nose is not known for having a big flat spot to put a transducer on. Furthermore, the nose is often filled with air, so we would have to fill it with ultrasound gel to get effective stimulation from below. Instead, we found that you can couple to the forehead and steer the beam downward to access the olfactory bulb. Notably, the frontal sinuses are in the way, which may significantly decrease the strength of the stimulation. We tried to maximize the portion of the aperture of the transducer located above them, but it’s unclear how much of an effect the sinuses had on the experiment.
+The olfactory bulb, our [target](https://pmc.ncbi.nlm.nih.gov/articles/PMC3361538/), is tucked behind the top of the nose. That turns out to be a pretty inconvenient location for a couple of reasons:
+
+1. The nose doesn’t provide a flat surface for mounting a transducer for stimulation.
+2. It's mostly filled with air, which interferes with ultrasound. Ultrasound needs a continuous medium to travel through, and filling the nose with gel seemed rather unappealing.
+
+Instead, we found that you can place the transducer on the forehead and aim the ultrasound downward towards the olfactory bulb. While this isn’t a perfect solution because the frontal sinuses can weaken the signal, careful device positioning above the sinuses still allows us to reach our general target region. 
+
 
 ### The ultrasound
 
-Initially, we got the first signal with just a handheld probe and some ultrasound gel. However, it’s very difficult to maintain consistent focal spot positions with a handheld probe, so we used a headset. It got a little bit hacky:  
+We got our first effects using just a handheld probe and some gel, but it quickly became obvious that holding a probe steady by hand makes it nearly impossible to keep the focal spot in the same place. 
+To improve stability, we improvised a makeshift headset, allowing for more reliable positioning. We switched from gel to a solid, jello-like pad for stability and general comfort. In the end, our headset got a bit hacky:
 <div className="flex gap-12 justify-center my-8 items-center">
     <div>
         <img src="/images/image4.png" alt="Anatomy 1" className="h-64 w-auto rounded-lg" style={{ height: '15rem', margin: '0' }} />
     </div>
 </div>
-It ended up having a fork taped to the probe for mechanical stability, and at some point we thought of using a mouthguard for fixing the probe relative to the brain. This was a great idea considering the teeth are the only exposed part of the skull, however it was impossible to describe the smells while having the mouthguard.
+It ended up having a fork taped to the probe for mechanical support. At some point we thought of using a mouthguard for fixing the probe relative to the brain. This was a great idea considering the teeth are the only exposed part of the skull, except it turns out you can’t talk about smells while wearing a mouthguard.
 
-We also used a solid coupling solution instead of ultrasonic gel, which was helpful for stable positioning and the overall experience.
-
-For placement, we measured the positioning of the transducer and the focal spot based on an MRI of Lev’s skull:  
+To guide placement, we used an MRI of Lev’s skull to roughly determine where the transducer would point and how the focal region (where ultrasound waves actually concentrate) aligned with the olfactory bulb (the target for stimulation). 
 <div className="flex gap-12 justify-center my-8 items-center">
     <div>
         <img src="/images/mri.jpeg" alt="Anatomy 1" className="h-64 w-auto rounded-lg" style={{ height: '15rem', margin: '0' }} />
     </div>
 </div>
 
-We ended up using 300 kHz frequency, with 39mm depth and 50-55 degree steering angles. We used pulses with 300kHz carrier frequency, made of 5 cycles with a 1200 Hz pulse repetition frequency. Albert did not have an MRI, but these parameters worked for him as well, with minor adjustments.
+We found our “sweet spot” to be low-frequency ultrasound focused right below the forehead and angled downward toward the bulbs. Specifically:
+- 300 kHz frequency (low enough to penetrate the skull well)
+- Focal depth of about 39 mm (where the ultrasound energy converged beneath the forehead)
+- 50–55° steering angles (to point the focus down toward the bulbs)
+- 5-cycle pulses at a 1200 Hz repetition rate (short, rapidly repeating bursts)
+
+While Albert did not have an MRI available, this general configuration still worked for him with minor adjustments to the focal spot position.
+
 
 ### Safety
 
-The largest chunk of the time was spent on making sure the ultrasound sequences were as we expected and that they were safe. We measured the field produced by the transducer with a hydrophone tank. The intensity at the focal spot was 150 to 250 kPa, which corresponded to a mechanical index of at most 0.4. That implied that the average intensity at the focal spot was by an order of magnitude lower than what's typically used in tFUS and has been proven safe. We were also far within safety limits on  mechanical index and thermal dose.   
-We were concerned with hitting the optic nerves, so we tried to avoid any significant asymmetry in the system: the nerves are further from the middle of the head. The olfactory bulb, however, has its two components slightly off-center, so a bit of asymmetry was necessary: we did focus at an angle of 2 degrees to the side in one of the presets. However, we stayed within the limit of 15 degrees, which is enough not to touch the optic nerves.
+The largest chunk of the time was spent on making sure the ultrasound sequences behaved safely and in the manner we expected, split between two directions:
+
+1. Measuring the output field. We put the transducer in a water tank and measured the intensity at the focal spot. With our parameters,  was 150 to 250 kPa, which corresponded to a mechanical index of at most 0.4. That implied that the average intensity at the focal spot was by an order of magnitude lower than what's typically used in tFUS and has been proven safe. We were also far within safety limits on  mechanical index and thermal dose.   
+2. Avoiding the optic nerve by reducing asymmetry in the system: the nerves are further from the middle of the head. The olfactory bulb also has its two components slightly off-center, so a bit of asymmetry was necessary: we focused at an angle of 2 degrees to the side in one of the presets. However, we stayed within the limit of 15 degrees, which is enough not to touch the optic nerves.
 
 ## Results
 
 We have managed to induce four different sensations, all of them in two people:  
 <SmellList />
 
-We distinguish between “smell” and “sensation” here because they feel different, *subjectively*. The smells are strong and localized to the noise—as if you could find the source by sniffing around. The sensations are more general—usually a weak, slow-onset smell with other (likely placebo) feelings, such as a light tingling on the face. Both smells and sensations are strongest on a light in-breath, so we tested by sitting there, with a probe to the forehead, mildly sniffing. Sometimes there is a slight waft of a smell that comes on over a few breaths, and sometimes it just hits you. The first time Albert smelled the garbage, he jerked his eyes open thinking a garbage truck just drove in\! 
+We distinguish between _a smell_ and _a sensation_ here because, subjectively, they feel different. The smells are strong and localized to the noise, almost like you could sniff around and find the source. The sensations are more diffuse: a weak, slow-onset impression of a smell, often paired with other (likely placebo) feelings, such as a light tingling on the face.
 
-Many of these scents correspond not to specific receptor types but rather combinations of receptors. We think this is because the focal spot is pretty large—300kHz ultrasound in tissue has a wavelength of 5mm, while the adult human olfactory bulb is roughly 6-14mm in length. 
+Both smells and sensations are strongest on a light in-breath, so we tested by sitting there, with a probe to the forehead, mildly sniffing. Sometimes there is a slight waft of a smell that comes on over a few breaths, and sometimes it just hits you. The first time Albert smelled the garbage, he jerked his eyes open thinking a garbage truck just drove in!<sup><a href="#fn1" id="ref1" data-footnote-ref>1</a></sup>
+
+Many of these scents correspond not to specific receptor types but rather combinations of receptors. We think this is because the focal spot is pretty large—300kHz ultrasound in tissue has a wavelength of 5mm, while the adult human olfactory bulb is roughly 6-14mm in length<sup><a href="#fn2" id="ref2" data-footnote-ref>2</a></sup>. 
 
 We found different scents by steering the beam over \~14 mm (20 degrees at 4 cm radius). The distance between freshness and burning was \~3.5 mm. We ensured that the effect was not placebo with an auditory mask (blasting music through airpods) so you don’t hear the probe, though you cannot distinguish the different focal spots through sound anyways. We then tested discrimination in a trial where Thomas selected the focal spots, and Lev was naming the scents. You can check out the full video [here](https://drive.google.com/file/d/15unzKH91czjzKANmB-eiTck7f7kKphz-/view?usp=sharing).
 
-It is remarkable that we could induce different scents with such little steering (40% of the diffraction-limited focal spot size). This suggests that the resolution we have access to is much higher than the spatial resolution of the ultrasound (a kind of *super-resolution for neurostim!*) In particular, we do not need single-neuron resolution to find an independent basis of scents, upon which we can construct our latent space. To improve this system, the next steps are a more stable setup, increased frequency, more play with focal location, spot size, and stimulus waveform. 
+It is remarkable that we could induce different scents with such little steering (40% of the diffraction-limited focal spot size<sup><a href="#fn3" id="ref3" data-footnote-ref>3</a></sup>). This suggests that the resolution we have access to is much higher than the spatial resolution of the ultrasound (a kind of *super-resolution for neurostim!*) In particular, we do not need single-neuron resolution to find an independent basis of scents, upon which we can construct our latent space. To improve this system, the next steps are a more stable setup, increased frequency, more play with focal location, spot size, and stimulus waveform. 
 
 ### Can you feel the meaning
 
@@ -97,3 +113,22 @@ We found four scents in a couple of days. With a little more engineering, it sho
 If we gain control of all 400 basis vectors, we might be able to **smell meaning**.   
 And we’ve already done the first one percent. 
 
+<div data-footnotes>
+  <ol>
+    <li id="fn1">
+      <p>
+        This was indoors. <a href="#ref1" data-footnote-backref aria-label="Back to content">↩</a>
+      </p>
+    </li>
+    <li id="fn2">
+      <p>
+        The olfactory bulb can vary in size by up to 3x, depending on "age and olfactory experience", so perhaps (we're making this up) with more usage of this kind of stimulation, <b>your olfactory bulb might actually get bigger</b>, leading to better resolution stimulation! <a href="#ref2" data-footnote-backref aria-label="Back to content">↩</a>
+      </p>
+    </li>
+    <li id="fn3">
+      <p>
+        And potentially even higher, because there was some dead space in between the focal spots, where you don't feel anything. <a href="#ref3" data-footnote-backref aria-label="Back to content">↩</a>
+      </p>
+    </li>
+  </ol>
+</div>

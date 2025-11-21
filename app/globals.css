@@ -252,9 +252,47 @@ article li {
 }
 
 /* Footnotes */
+/* Footnotes */
 [data-footnotes] {
   margin-top: 4rem;
-  border-top: 1px solid var(--accent);
+  border-top: 1px solid #eaeaea;
   padding-top: 2rem;
   font-size: 0.9rem;
+  color: var(--accent);
+}
+
+[data-footnotes] ol {
+  padding-left: 1.5rem;
+  list-style-type: decimal;
+}
+
+[data-footnotes] li {
+  margin-bottom: 1rem;
+}
+
+[data-footnotes] p {
+  margin-bottom: 0.5rem;
+  display: inline;
+}
+
+[data-footnote-ref] {
+  font-size: 0.75rem;
+  vertical-align: super;
+  line-height: 0;
+  text-decoration: none;
+  margin-left: 2px;
+  color: var(--accent);
+  background: none;
+}
+
+[data-footnote-backref] {
+  text-decoration: none;
+  margin-left: 4px;
+  font-family: var(--font-sans);
+  color: var(--accent);
+  background: none;
+}
+
+[data-footnote-backref]:hover {
+  color: var(--foreground);
 }

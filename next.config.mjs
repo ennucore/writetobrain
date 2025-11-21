@@ -15,6 +15,7 @@ const withMDX = createMDX({
     // remarkPlugins: [remarkGfm],
     rehypePlugins: [],
   },
+
 })
 
 export default withMDX(nextConfig)
