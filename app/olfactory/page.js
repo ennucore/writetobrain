@@ -160,8 +160,8 @@ export default function OlfactoryPage() {
 
             {/* <div className="mb-8">
                 <video controls className="w-full rounded-lg" style={{ maxHeight: '500px', width: '100%' }}>
-                    <source src="/videos/signal-2025-11-18-124020.mov" type="video/quicktime" />
-                    <source src="/videos/signal-2025-11-18-124020.mov" type="video/mp4" />
+                    <source src="/videos/signal-2025-11-18-124020.mp4" type="video/quicktime" />
+                    <source src="/videos/signal-2025-11-18-124020.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div> */}
