@@ -4,28 +4,135 @@ import Image from 'next/image'
 import TableOfContents from './TableOfContents'
 import { FootnoteProvider } from './FootnoteContext'
 import FootnoteDisplay from './FootnoteDisplay'
+import Script from 'next/script'
+
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'We Induced Artificial Smells With Ultrasound Brain Stimulation',
+    description: 'First-ever ultrasound olfactory stimulation in humans. We used focused ultrasound to stimulate the olfactory bulb and reliably induced distinct artificial smells like campfire and fresh air.',
+    image: 'https://writetobrain.com/images/image6.png',
+    datePublished: '2025-01-01',
+    dateModified: '2025-01-01',
+    author: [
+        {
+            '@type': 'Person',
+            name: 'Lev Chizhov',
+            url: 'https://lev.la',
+        },
+        {
+            '@type': 'Person',
+            name: 'Albert Yan-Huang',
+            url: 'https://exr0n.com/',
+        },
+        {
+            '@type': 'Person',
+            name: 'Thomas Ribeiro',
+            url: 'https://thomasrribeiro.com/',
+        },
+        {
+            '@type': 'Person',
+            name: 'Aayush Gupta',
+            url: 'https://aayushg.com/',
+        },
+    ],
+    publisher: {
+        '@type': 'Organization',
+        name: 'Write to Brain',
+        url: 'https://writetobrain.com',
+        logo: {
+            '@type': 'ImageObject',
+            url: 'https://writetobrain.com/favicon.png',
+        },
+    },
+    mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': 'https://writetobrain.com/olfactory',
+    },
+    keywords: 'fake smells, artificial smells, nose bci, ultrasound olfactory, olfactory stimulation, brain-computer interface, ultrasound brain stimulation, neuromodulation',
+    about: [
+        {
+            '@type': 'Thing',
+            name: 'Brain-Computer Interface',
+        },
+        {
+            '@type': 'Thing',
+            name: 'Ultrasound Neuromodulation',
+        },
+        {
+            '@type': 'Thing',
+            name: 'Olfactory System',
+        },
+    ],
+}
 
 export const metadata = {
-    title: 'We Induced Smells With Ultrasound',
-    description: 'We decided to try to stimulate the olfactory bulb with focused ultrasound. As far as we know, no one seems to have done this kind of stimulation before - even in animals.',
+    title: 'We Induced Artificial Smells With Ultrasound Brain Stimulation',
+    description: 'First-ever ultrasound olfactory stimulation in humans. We used focused ultrasound to stimulate the olfactory bulb and reliably induced distinct artificial smells like campfire and fresh air. A breakthrough in non-invasive brain-computer interfaces (nose BCI).',
+    keywords: [
+        'fake smells',
+        'artificial smells',
+        'nose bci',
+        'ultrasound olfactory',
+        'olfactory stimulation',
+        'ultrasound smell',
+        'induced smells',
+        'brain stimulation smells',
+        'olfactory bulb ultrasound',
+        'transcranial ultrasound olfactory',
+        'smell hallucination technology',
+        'non-invasive smell induction',
+        'ultrasound brain interface',
+        'smell bci',
+        'olfactory bci',
+        'focused ultrasound smell',
+        'smell latent space',
+    ],
+    authors: [
+        { name: 'Lev Chizhov', url: 'https://lev.la' },
+        { name: 'Albert Yan-Huang', url: 'https://exr0n.com/' },
+        { name: 'Thomas Ribeiro', url: 'https://thomasrribeiro.com/' },
+        { name: 'Aayush Gupta', url: 'https://aayushg.com/' },
+    ],
     openGraph: {
-        title: 'We Induced Smells With Ultrasound',
-        description: 'We decided to try to stimulate the olfactory bulb with focused ultrasound. As far as we know, no one seems to have done this kind of stimulation before - even in animals.',
+        type: 'article',
+        title: 'We Induced Artificial Smells With Ultrasound Brain Stimulation',
+        description: 'First-ever ultrasound olfactory stimulation in humans. We induced distinct artificial smells like campfire and fresh air using focused ultrasound - a nose BCI breakthrough.',
+        url: 'https://writetobrain.com/olfactory',
+        siteName: 'Write to Brain',
         images: [
             {
                 url: 'https://writetobrain.com/images/image6.png',
                 width: 1074,
                 height: 1000,
-                alt: 'Olfactory illustration',
+                alt: 'Ultrasound Olfactory Stimulation - Inducing Artificial Smells with Brain Stimulation',
             },
         ],
+        publishedTime: '2025-01-01T00:00:00.000Z',
+        authors: ['Lev Chizhov', 'Albert Yan-Huang', 'Thomas Ribeiro', 'Aayush Gupta'],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'We Induced Artificial Smells With Ultrasound',
+        description: 'First ultrasound olfactory stimulation in humans! We reliably induced distinct smells like campfire and fresh air. A nose BCI breakthrough.',
+        images: ['https://writetobrain.com/images/image6.png'],
+        creator: '@ennucore',
+    },
+    alternates: {
+        canonical: 'https://writetobrain.com/olfactory',
     },
 }
 
 export default function OlfactoryPage() {
     return (
-        <article>
-            <header className="mb-8 mt-36 text-center">
+        <>
+            <Script
+                id="json-ld"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <article>
+                <header className="mb-8 mt-36 text-center">
                 <div className="flex justify-center">
                     <Image
                         src="/images/image6.png"
@@ -81,6 +188,7 @@ export default function OlfactoryPage() {
                     ← Go to main
                 </Link>
             </div> */}
-        </article>
+            </article>
+        </>
     )
 }

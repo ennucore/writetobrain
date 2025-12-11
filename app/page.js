@@ -1,10 +1,55 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Script from 'next/script'
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Write to Brain',
+  description: 'Research on non-invasive brain-computer interfaces using focused ultrasound. Inducing artificial smells and other sensations through direct brain stimulation.',
+  url: 'https://writetobrain.com',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://writetobrain.com/?q={search_term_string}',
+    'query-input': 'required name=search_term_string',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Write to Brain',
+    url: 'https://writetobrain.com',
+  },
+}
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ResearchOrganization',
+  name: 'Write to Brain',
+  url: 'https://writetobrain.com',
+  description: 'Pioneering non-invasive brain-computer interface research using focused ultrasound for olfactory and sensory stimulation.',
+  knowsAbout: [
+    'Brain-Computer Interface',
+    'Focused Ultrasound',
+    'Neuromodulation',
+    'Olfactory Stimulation',
+    'Non-invasive Brain Stimulation',
+  ],
+}
 
 export default function Home() {
   return (
-    <div className="max-w-2xl mx-auto mt-20">
-      <h1 className="text-3xl font-bold mb-8 font-heading">Methods of writing to brain</h1>
+    <>
+      <Script
+        id="website-json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Script
+        id="org-json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <div className="max-w-2xl mx-auto mt-20">
+        <h1 className="text-3xl font-bold mb-8 font-heading">Methods of Writing to Brain</h1>
 
       <div className="border-t border-accent" style={{ paddingTop: '0.3rem' }}>
         <Link href="/olfactory" className="block group no-underline">
@@ -30,7 +75,8 @@ export default function Home() {
           </div>
         </Link>
         {/* Placeholder for future methods */}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
